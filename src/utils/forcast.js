@@ -18,7 +18,7 @@ const forcast = (error, {longitude, latitude}, callback)=>{
              const data ={
             temp : body.main.temp,
             cloud : body.clouds.all,
-            description: body.weather[0].description
+            description: body.weather[0].description + " at " + latitude + " and " + longitude
              }
              callback(error, data)
         }
